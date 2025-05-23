@@ -31,3 +31,8 @@ reportUnknownParameterType = false
 reportUnknownLambdaType = false
 reportUnknownVariableType = false
 reportPrivateImportUsage = false
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.11",
+]
