@@ -1,0 +1,33 @@
+[project]
+name = "agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dirigera>=1.2.3",
+    "fastapi>=0.115.12",
+    "mlflow>=3.0.0rc2",
+    "pydantic-ai[openai]>=0.1.11",
+]
+
+[tool.uv]
+package = true
+
+[tool.basedpyright]
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
+
+reportMissingTypeStubs = false
+reportOptionalSubscript = false
+reportOptionalCall = false
+reportOptionalMemberAccess = false
+reportMissingTypeArgument = false
+reportAny = false
+reportUnknownArgumentType = false
+reportUntypedFunctionDecorator = false
+reportUnknownParameterType = false
+reportUnknownLambdaType = false
+reportUnknownVariableType = false
+reportPrivateImportUsage = false
