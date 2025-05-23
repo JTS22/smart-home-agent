@@ -8,7 +8,7 @@ from agent import AgentRequest, run_agent, reset_agent
 
 mlflow.pydantic_ai.autolog()
 mlflow.set_tracking_uri("/home/coder/smart-home/mlflow")
-_ = mlflow.set_experiment("SmartHomeAgent")
+_ = mlflow.set_experiment(f"{os.getenv("MLFLOW_EXPERIMENT_NAME", "Smart Home Agent")}")
 
 app = FastAPI()
 

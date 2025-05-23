@@ -13,6 +13,8 @@ dependencies = [
 
 [tool.uv]
 package = true
+cache-dir="/home/coder/smart-home/uv-cache"
+prerelease = "allow"
 
 [tool.basedpyright]
 typeCheckingMode = "basic"

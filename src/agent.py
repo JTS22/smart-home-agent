@@ -43,13 +43,13 @@ class DeviceDeps:
             self.light_chain_outlet: Outlet = self.dirigera_hub.get_outlet_by_name(
                 outlet_name="Fotolicht"
             )
-            self.room_lights_1: Light = self.dirigera_hub.get_light_by_name(
+            self.room_lights: Light = self.dirigera_hub.get_light_by_name(
                 lamp_name="Licht 1"
             )
 
 
 all_messages: list[ModelMessage] | None = None
-devices: DeviceDeps = DeviceDeps(False)
+devices: DeviceDeps = DeviceDeps(has_dirigera=False)
 
 agent = Agent(
     "openai:gpt-4o",
