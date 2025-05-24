@@ -8,7 +8,7 @@ from agent import AgentRequest, run_agent, reset_agent
 
 mlflow.pydantic_ai.autolog()
 mlflow.set_tracking_uri("/home/coder/smart-home/mlflow")
-_ = mlflow.set_experiment(f"{os.getenv("MLFLOW_EXPERIMENT_NAME", "Smart Home Agent")}")
+_ = mlflow.set_experiment(f"{os.getenv('MLFLOW_EXPERIMENT_NAME', 'Smart Home Agent')}")
 
 app = FastAPI()
 
@@ -73,4 +73,9 @@ async def reset() -> JSONResponse:
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True, log_level="debug", port=int(os.getenv("UVICORN_PORT", "8912")))
+    uvicorn.run(
+        "main:app",
+        reload=True,
+        log_level="debug",
+        port=int(os.getenv("UVICORN_PORT", "8912")),
+    )
