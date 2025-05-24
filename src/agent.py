@@ -217,7 +217,7 @@ def toggle_room_lights(
 
 
 @agent.tool
-def get_current_time(ctx: RunContext[DeviceDeps]) -> str:
+def get_current_time(_: RunContext[DeviceDeps]) -> str:
     """Get the current date and time."""
     # Get current date and time
     now = datetime.datetime.now()
